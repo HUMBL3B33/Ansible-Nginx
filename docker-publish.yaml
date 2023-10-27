@@ -9,7 +9,7 @@
         name: docker
         state: present
 
-    - name: Deploy NGINX container on port 6000
+    - name: Deploy NGINX container on port 8000
       docker_container:
         name: nginx_container
         image: nginx
