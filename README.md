@@ -1,6 +1,7 @@
 # Ansible Playbooks for NGINX Configuration and File Copy
 
 ![Alt text](Nginx-conf-ansible.png)
+![Alt text](Nginx-cont-normal.png)
 
 This repository contains Ansible playbooks to perform two operations on a remote machine with an NGINX server:
 
