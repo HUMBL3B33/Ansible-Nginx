@@ -1,0 +1,21 @@
+---
+- name: Update NGINX configuration
+  hosts: servers
+  become: yes  # to run tasks as sudo
+
+  tasks:
+    - name: Replace listen 80 with listen 5000 in NGINX default config
+      replace:
+        path: /etc/nginx/sites-enabled/default
+        regexp: 'listen 80 default_server;'
+        replace: 'listen 5000 default_server;'
+
+    - name: Copy index.html from local to remote
+      copy:
+        src: /var/www/html/index.html
+        dest: /var/www/html/index.html
+
+    - name: restart nginx
+      service:
+        name: nginx
+        state: restarted
