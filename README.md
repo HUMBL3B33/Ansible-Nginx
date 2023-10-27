@@ -24,5 +24,5 @@ This repository contains Ansible playbooks to perform two operations on a remote
 3. Run the following command to execute the playbooks:
 
 ```bash
-ansible-playbook <PLAYBOOK FILE NAME>
+ansible-playbook <PLAYBOOKFILE NAME> -i <HOSTFILE NAME>
 
